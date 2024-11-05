@@ -1,4 +1,4 @@
-<img src="public/images/hero.png">
+<img src="images/hero.png">
 
 <div align="center">
 
