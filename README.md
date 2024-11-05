@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Spokane Grafitti Project
 
 ```sh
 npm create astro@latest -- --template basics
