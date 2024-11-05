@@ -1,6 +1,6 @@
 <img src="public/images/hero.png">
 
-<div style="align-content:center;">
+<div align="center">
 
 ## Learn More about Spokane's Graffiti!
 
