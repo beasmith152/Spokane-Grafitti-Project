@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+import 'swiper/swiper-bundle.css';
+
 ---
 
 <Layout title="Spokane Grafitti.">
@@ -28,13 +31,43 @@ import Card from '../components/Card.astro';
 			</defs>
 		
 
-		<h1>Spokane Grafitti</h1>
 		
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide">Slide 1</div>
+			  <div class="swiper-slide">Slide 2</div>
+			  <div class="swiper-slide">Slide 3</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Navigation -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		  </div>
 		
 	</main>
 	</div>
 	</body>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    import('swiper/bundle').then(({ default: Swiper }) => {
+      new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    });
+  });
+  </script>
 
 <style>
 	body{
@@ -108,7 +141,22 @@ import Card from '../components/Card.astro';
 		padding: 0;
 		text-align:center;
 	}
-	card{
-		background-color: aqua;
-	}
+	.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    z-index: 10;
+  }
+
+
 </style>
