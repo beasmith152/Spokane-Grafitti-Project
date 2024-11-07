@@ -100,7 +100,27 @@ import Card from '../components/Card.astro';
 		padding: 0;
 		text-align:center;
 	}
-	card{
-		background-color: aqua;
+	@media(max-width:780px;){
+		html{
+		height:120vh;
+		width:100%;
+		margin:0;
+		padding:0;
+	}
+	body{
+		height:120vh;
+		width:100%;
+		background-image: url('https://irp-cdn.multiscreensite.com/6ff94093/dms3rep/multi/tumblr_inline_ntyks0xBdN1tbk6o9_1280-1280x851.png');
+		background-size: cover;
+		background-position: center;
+		margin: 0;
+	}
+	.overlay{
+		background: rgba(0,0,0,0.5);
+		height:130vh;
+		width:100%;
+	}
+
+
 	}
 </style>
