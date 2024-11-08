@@ -26,20 +26,19 @@ import 'swiper/swiper-bundle.css';
 		<div class="overlay">
 	<main>
 		<div class="slider">
-
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-				  <div class="swiper-slide"><img src="/images/IMG_3999.JPG"/></div>
-				  <div class="swiper-slide"><img src="/images/IMG_4001.JPG"/></div>
-				  <div class="swiper-slide"><img src="/images/IMG_4002.JPG"/></div>
+				  <div class="swiper-slide"><img src ="/images/IMG_3999.JPG"/></div>
+				  <div class="swiper-slide"><img src ="/images/IMG_4001.JPG"/></div>
+				  <div class="swiper-slide"><img src ="/images/IMG_4002.JPG"/></div>
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination"></div>
 				<!-- Add Navigation -->
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
-
-
+			  </div>
+			
 		</div>
 
 		
@@ -49,45 +48,10 @@ import 'swiper/swiper-bundle.css';
 	</body>
 </Layout>
 
-<script>
-	document.addEventListener('DOMContentLoaded', function () {
-	  import('swiper/bundle').then(({ default: Swiper }) => {
-		new Swiper('.swiper-container', {
-		  slidesPerView: 1,
-		  spaceBetween: 10,
-		  navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		  },
-		  pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		  },
-		});
-	  });
-	});
-  </script>
   
 <!-- style sheet -->
 
 <style>
- .swiper-container {
-    width: 100%;
-    height: 100%;
-  }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: white;
-    z-index: 10;
-  }
-
 	html{
 		height:100vh;
 		width:100%;
@@ -169,6 +133,24 @@ import 'swiper/swiper-bundle.css';
 		margin-bottom: 1em;
 	}
 
+	.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    z-index: 10;
+  }
+
 	@media(max-width:780px;){
 		html{
 		height:100vh;
@@ -190,7 +172,47 @@ import 'swiper/swiper-bundle.css';
 		width:100%;
 	}
 
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    z-index: 10;
 
 	}
 
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+	  import('swiper/bundle').then(({ default: Swiper }) => {
+		new Swiper('.swiper-container', {
+		  slidesPerView: 1,
+		  spaceBetween: 20,
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		  pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		  },
+		  loop: true, // Enable looping
+		});
+	  });
+	});
+  </script>
